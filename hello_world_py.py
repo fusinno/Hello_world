@@ -1,19 +1,24 @@
 """Generate colored ASCII art for 'Hello World!'"""
 
+
 import random
+
 
 import pyfiglet
 from colorama import Fore, Style, init
 
 
 def hello_world_word_art() -> None:
+
     """Print a colorful 'Hello World!' using pyfiglet with random colors."""
+
 
     # Initialize colorama to ensure ANSI codes work on all platforms
     init(autoreset=True)
 
     # Create ASCII art with a more stylish font
     ascii_art = pyfiglet.figlet_format("Hello World!", font="slant")
+
 
     # Define a palette of colors to choose from
     colors = [
@@ -35,6 +40,7 @@ def hello_world_word_art() -> None:
             colored_chars.append(char)
 
     print("".join(colored_chars))
+
 
 
 if __name__ == "__main__":
